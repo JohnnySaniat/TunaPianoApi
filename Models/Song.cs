@@ -1,13 +1,19 @@
-﻿namespace TunaPianoApi.Models;
-public class Song
-{
-    public int Id { get; set; }
-    public string Title { get; set; }
-    public int ArtistId { get; set; }
-    public string Album { get; set; }
-    public float Length { get; set; }
+﻿using System.Collections.Generic;
 
-    public ICollection<Genre> Genres { get; set; }
-};
+namespace TunaPianoApi.Models
+{
+    public class Song
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public int ArtistId { get; set; }
+        public string Album { get; set; }
+        public float Length { get; set; }
+
+        public Artist Artist { get; set; }
+
+        public ICollection<Genre> Genres { get; set; }
+    }
+}
 
 
